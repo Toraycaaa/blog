@@ -42,6 +42,10 @@ body {   /* background image*/
     padding-bottom: 5em !important;/*!important 提高重要性，semantic中的元素重要性都为important*/
 }
 
+.m-padded-lr {
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
 
 /* text */
 .m-text {
@@ -80,6 +84,10 @@ body {   /* background image*/
     max-width: 72em;
     margin: auto;
 }
+.m-container-small {
+    max-width: 60em;
+    margin: auto;
+}
 
 /*margin*/
 .m-margin-top-large {
@@ -95,6 +103,7 @@ body {   /* background image*/
     margin-top: 0.3em !important;
     margin-bottom: 0.3em !important;
 }
+
 
 /*colors*/
 .m-black {
