@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0 ">   
+        <!--移动端 width 宽度= 设备宽度，缩放比例= 1.0 -->
+        <title> 分类页面 </title>
+        <!--引入前端框架 Semantic -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <!--import css-->
+        <link rel="stylesheet" href="./static/css/me.css">
+    </head>
+<body>
+    <!--导航 <nav>  class= 引入 inverted 反色 attached 吸附 segment 段   --> 
+    <!--m-padded-tb-mini    自定义的segment宽度,在me.css-->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <!--放入container中-->
+        <div class="ui container">
+            <!--导航中的menu-->
+            <div class="ui inverted secondary stackable menu"> <!--stackable: 自适应页面大小-->
+                <!--Logo--><!--(teal -> color)-->
+                <h2 class="ui teal header item">Blog</h2>
+                <!--hyperlink <a> --> <!--<i> icon-->
+                <a href="#" class="m-item m-mobile-hide item"><i class="home icon"></i>首页</a> <!--m-item:jQuery item-->
+                <a href="#" class="active m-item m-mobile-hide item"><i class="idea icon"></i>分类</a>
+                <a href="#" class="m-item m-mobile-hide item"><i class="tags icon"></i>标签</a>
+                <a href="#" class="m-item m-mobile-hide item"><i class="clone icon"></i>归档</a>
+                <a href="#" class="m-item m-mobile-hide item"><i class="info icon"></i>关于</a>
+                <div class="right m-item m-mobile-hide item"> <!--right alignment item-->
+                    <div class="ui icon inverted transparent input">  <!--input item with icon and it is transparent-->
+                        <input type="text" placeholder="Search...."> <!--search box-->
+                        <i class="search link icon"></i>
+                    </div>
+                </div> 
+
+
+
+            </div>
+        </div>
+        <!--sidebar-->
+        <!--menu toggle: use jQuery to set click the button to show or hide navigation-->
+        <a href="#" class="ui menu toggle black m-right-top m-mobile-show button"> <!--m-mobile-show: show in mobile and hide in other screen-->
+            <i class="sidebar icon">
+            </i>
+        </a>
+    </nav>
+    <!--中间内容-->
+    <div class="m-container-small m-padded-tb-big">
+      <div class="ui container">
+        <!--header-->
+        <div class="ui top attached segment">
+          <div class="ui middle aligned two column grid"> <!--middle aligned 垂直居中-->
+              <div class="column">
+                  <h3 class="ui teal header">分类</h3>                               
+              </div>
+              <div class="right aligned column">  <!--other column which is right alignment-->
+                  <div class="column">
+                      共 <h3 class="ui red header m-inline-block m-text-thin">14</h3> 个
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="ui attached segment m-padded-tb-large">
+            <div class="ui labeled button m-margin-tb-tiny">
+              <a href="#" class="ui basic teal button">Consider</a>
+              <div class="ui basic teal left pointing label">24</div>
+            </div>
+            <div class="ui labeled button m-margin-tb-tiny">
+              <a href="#" class="ui basic teal button">Consider</a>
+              <div class="ui basic teal left pointing label">24</div>
+            </div>
+            <div class="ui labeled button m-margin-tb-tiny">
+              <a href="#" class="ui basic teal button">Consider</a>
+              <div class="ui basic teal left pointing label">24</div>
+            </div>
+            <div class="ui labeled button m-margin-tb-tiny">
+              <a href="#" class="ui basic teal button">Consider</a>
+              <div class="ui basic teal left pointing label">24</div>
+            </div>
+            <div class="ui labeled button m-margin-tb-tiny">
+              <a href="#" class="ui basic teal button">Consider</a>
+              <div class="ui basic teal left pointing label">24</div>
+            </div>
+            <div class="ui labeled button m-margin-tb-tiny">
+              <a href="#" class="ui basic teal button">Consider</a>
+              <div class="ui basic teal left pointing label">24</div>
+            </div>
+            <div class="ui labeled button m-margin-tb-tiny">
+              <a href="#" class="ui basic teal button">Consider</a>
+              <div class="ui basic teal left pointing label">24</div>
+            </div>
+            
+        </div>
+        <div class="ui top attached teal segment">
+          <div class="ui padded vertical segment m-mobile-lr-clear m-padded-tb-large"> <!--vertical: no margin in vertical level-->
+            <div class="ui mobile reversed stackable grid"> <!--mobile reversed:手机端翻转-->
+                <div class="ui  eleven wide column">
+                    <h3 class="ui header">财富自由</h3>
+                    <p class="m-text">height 和 width 属性有一种隐藏的特性，就是人们无需指定图像的实际大小，也就是说，
+                        这两个值可以比实际的尺寸大一些或小一些。浏览器会自动调整图像，使其适应这个预留空间的
+                        大小。使用这种方法就可以很容易地为大图像创建其缩略图，以及放大很小的图像。</p>
+                    <div class="ui stackable grid">
+                        <div class="left aligned eleven wide column">
+                            <div class="ui link mini horizontal list"> <!--horizontal list-->
+                                <div class="item">
+                                    <img src="./static/images/avatar.png" alt=""  class="ui avatar image"> <!--avatar 头像-->
+                                    <div class="content"><a class="header">Toraycaaa</a></div>
+                                </div>
+                                <div class="item">
+                                    <i class="ui calendar icon"></i> 2020-07-11
+                                </div>
+                                <div class="item">
+                                    <i class="eye icon"></i> viewcount
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right aligned five wide column">
+                            <a href="#" class="ui teal basic label m-padded-tiny m-text-thin">认知提升</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui five wide column">
+                    <a href="#" target="_blank"> <!-- target="_blank" 浏览器总在一个bai新打开、未命名的窗口中载入du目zhi标文档-->
+                        <img src="https://images.unsplash.com/photo-1509817943730-519247f1dd94?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"  width="400" height="150" alt="" class="ui rounded image"> <!--alt 图片的悬浮文本-->
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--footer-->
+        <div class="ui bottom attached segment">
+          <div class="ui middle aligned two column grid"> <!--middle aligned 垂直居中-->
+              <div class="column">
+                  <a href="#" class="ui mini teal basic button">上一页</a>                          
+              </div>
+              <div class="right aligned column">  <!--other column which is right alignment-->
+                  <div class="column">
+                      <a href="#" class="ui mini teal basic button">下一页</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+        
+        <br> <!--new line-->
+        <br> <!--new line-->
+        <br> <!--new line-->
+    </div>
+
+    <!--footer-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive"> <!--vertical to remove rounded corners -->
+        <div class="ui center aligned container"> <!--居中-->
+            <div class="ui inverted divided stackable grid"> <!--grid style to 16 parts, divided to split line-->
+                <div class="three wide column"> <!--3parts-->
+                    <div class="ui inverted link list">
+                        <h4 class="ui inverted header m-text-thin m-text-spaced">在线乞讨⬇</h4>
+                        <div class="item">
+                            
+                            <img src="./static/images/QR code.png" class="ui rounded image" alt="" style="width: auto;height: auto;">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                    <!--link list-->
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">User Story</a>
+                        <a href="#" class="item">User Story</a> 
+                        <a href="#" class="item">User Story</a>    
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+                    <!--link list-->
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">E-mail: zhiyao.li@student.unimelb.edu.au</a>
+                        <a href="#" class="item">QQ: 709319582</a> 
+                        
+                    </div> 
+                </div>  
+                <div class="six wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">Toraycaaa</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客哟</p>
+                </div>
+
+            </div>
+            <div class="ui inverted section divider"></div> <!-- a split line at bottom-->
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright 😁 2020 Designed by Toraycaaa</p>
+        </div>
+    </footer>
+
+
+
+
+
+<!--引入JS API jqury -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<!--引入前端框架 Semantic -->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <!--jQuery script to show or hide nav by click the button-->
+    <script th:inline="javascript">
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+
+        
+        
+    </script>
+
+    
+</body>
+</html>

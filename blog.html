@@ -13,7 +13,7 @@
 <body>
     <!--导航 <nav>  class= 引入 inverted 反色 attached 吸附 segment 段   --> 
     <!--m-padded-tb-mini    自定义的segment宽度,在me.css-->
-    <nav class="ui inverted attached segment m-padded-tb-mini">
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
         <!--放入container中-->
         <div class="ui container">
             <!--导航中的menu-->
@@ -21,7 +21,7 @@
                 <!--Logo--><!--(teal -> color)-->
                 <h2 class="ui teal header item">Blog</h2>
                 <!--hyperlink <a> --> <!--<i> icon-->
-                <a href="#" class="m-item m-mobile-hide item"><i class="home icon"></i>首页</a> <!--m-item:jQuery item-->
+                <a href="#" class="active m-item m-mobile-hide item"><i class="home icon"></i>首页</a> <!--m-item:jQuery item-->
                 <a href="#" class="m-item m-mobile-hide item"><i class="idea icon"></i>分类</a>
                 <a href="#" class="m-item m-mobile-hide item"><i class="tags icon"></i>标签</a>
                 <a href="#" class="m-item m-mobile-hide item"><i class="clone icon"></i>归档</a>
@@ -77,25 +77,150 @@
                     <div class="ui orange basic label">原创</div>
                </div>
                <h2 class="ui center aligned header">title</h2>
-               <div id="content" class="m-padded-lr m-padded-tb-large"> 
+               <div id="content" class=".m-padded-lr-reponsive m-padded-tb-large"> 
                    <h2>1</h2>
                    <p>content</p>
                </div>
                <!--tags-->
-               <div class="m-padded-lr">
+               <div class=".m-padded-lr-reponsive">
                    <div class="ui basic teal left pointing label">method</div>
                </div>
                <!--reward-->
                <div class="ui center aligned basic segment">
-                <button class="ui basic orange circular button">Reward</button> <!--circular:圆角-->
-                
+                <button id="payButton" class="ui basic orange circular button">Reward</button> <!--circular:圆角-->
                </div>
+               <div class="ui payQR flowing popup top left transition hidden">
+                    <div class="ui orange basic label">
+                        <div class="ui images" style="font-size: inherit !important;"> <!--inherit:继承上级-->
+                            <div class="image">
+                                <img src="./static/images/QR code.png" alt="" class="ui rounded bordered image" style="width: 120px;"> <!--bordered:边线-->
+                                <div>Alipay</div>
+                            </div>
+                            <div class="image">
+                                <img src="./static/images/QR code.png" alt="" class="ui rounded bordered image" style="width: 120px;">
+                                <div>Wechat</div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               
            </div>
+           <!--info-->
            <div class="ui positive attached message"> <!--positive:a type of message-->
-               <!--info-->
+            <div class="ui middle aligned grid">
+                <div class="eleven wide column">
+                    <ui class="list">
+                        <li>Author:</li>
+                        <li>Time:</li>
+                        <li>版权声明:</li>
+                        <li>公众号:</li>
+                    </ui>
+                </div>
+                <div class="five wide column">
+                    <img src="./static/images/QR code.png" alt="" class="ui right floated rounded bordered image" style="width: 110px;"> <!--right floated:向右浮动，靠右-->
+                </div>
+            </div>
            </div>
            <div class="ui bottom attached segment">
-               comment
+               <div class="ui teal segment">
+                <div class="ui comments">
+                    <h3 class="ui dividing header">Comments</h3>
+                    <div class="comment">
+                      <a class="avatar">
+                        <img src="./static/images/avatar.png">
+                      </a>
+                      <div class="content">
+                        <a class="author">Matt</a>
+                        <div class="metadata">
+                          <span class="date">Today at 5:42PM</span>
+                        </div>
+                        <div class="text">
+                          How artistic!
+                        </div>
+                        <div class="actions">
+                          <a class="reply">Reply</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment">
+                      <a class="avatar">
+                        <img src="./static/images/avatar.png">
+                      </a>
+                      <div class="content">
+                        <a class="author">Elliot Fu</a>
+                        <div class="metadata">
+                          <span class="date">Yesterday at 12:30AM</span>
+                        </div>
+                        <div class="text">
+                          <p>This has been very useful for my research. Thanks as well!</p>
+                        </div>
+                        <div class="actions">
+                          <a class="reply">Reply</a>
+                        </div>
+                      </div>
+                      <div class="comments">
+                        <div class="comment">
+                          <a class="avatar">
+                            <img src="./static/images/avatar.png">
+                          </a>
+                          <div class="content">
+                            <a class="author">Jenny Hess</a>
+                            <div class="metadata">
+                              <span class="date">Just now</span>
+                            </div>
+                            <div class="text">
+                              Elliot you are always so right :)
+                            </div>
+                            <div class="actions">
+                              <a class="reply">Reply</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment">
+                      <a class="avatar">
+                        <img src="./static/images/avatar.png">
+                      </a>
+                      <div class="content">
+                        <a class="author">Joe Henderson</a>
+                        <div class="metadata">
+                          <span class="date">5 days ago</span>
+                        </div>
+                        <div class="text">
+                          Dude, this is awesome. Thanks so much
+                        </div>
+                        <div class="actions">
+                          <a class="reply">Reply</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+               </div>
+               <div class="ui form">
+                   <div class="ui field">
+                       <!--textarea:多行文本输入框--> <!--placeholder:提示内容-->
+                       <textarea name="content" placeholder="reply here..." id="" cols="30" rows="10"></textarea>
+                   </div>
+                   <div class="fields">
+                       <div class="ui field m-mobile-wide m-margin-bottom-small">
+                           <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="nickname" placeholder="name">
+                           </div>   
+                        </div>
+                        <div class="ui field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                 <i class="mail icon"></i>
+                                 <input type="text" name="nickname" placeholder="address">
+                            </div>   
+                        </div>
+                        <div class="ui field m-mobile-wide m-margin-bottom-small">
+                            <button class="ui teal button m-mobile-wide"><i class="ui edit icon"></i>Submit</button>
+                        </div>
+                   </div>
+                
+               </div>
            </div>
        </div>
         
@@ -160,7 +285,15 @@
         $('.menu.toggle').click(function () {
             $('.m-item').toggleClass('m-mobile-hide');
         });
+
+        $('#payButton').popup({
+            popup : $('.payQR.popup'),
+            on : 'click',
+            position: 'bottom center'
+        });
+        
     </script>
+
     
 </body>
 </html>
